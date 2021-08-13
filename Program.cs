@@ -18,19 +18,15 @@ namespace Bees
 
             // 3 bees (Kurt, Dave, Krist) -> Sizes (2.3, 7.4, 1.5)
             Hive Hive2 = new Hive(4);
-            Hive2.Bees.Add(new Bee("kurt", 2.3f));
+            Hive2.Bees.Add(new Bee("Kurt", 2.3f));
             Hive2.Bees.Add(new Bee("Dave", 7.4f));
             Hive2.Bees.Add(new Bee("Krist",1.5f));
 
 
             Console.WriteLine($"Hive 1 produces {Hive1.collecthoney(7)} portions of honey per week, while the Second hive produces {Hive2.collecthoney(7)} units per day");
-            if(Hive1.maxAmount==Hive1.Bees.Count){
-                Console.WriteLine($"Hive 1 is full! (limit {Hive1.maxAmount})");
-            }
-            else
-            {
-                Console.WriteLine($"Hive 1 is home to {Hive1.Bees.Count} bees, it's currently at it's capacity, it can house no more" );
-            }
+            
+            Console.WriteLine($"Hive 1 is home to {Hive1.Bees.Count} bees, it's currently at it's capacity, it can house no more" );
+            
             if(Hive2.maxAmount==Hive2.Bees.Count){
             Console.WriteLine($"Hive 2 is full! (limit {Hive2.maxAmount})");
             }
